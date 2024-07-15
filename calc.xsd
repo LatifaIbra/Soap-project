@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://tempuri.org/"
+           xmlns="http://tempuri.org/"
+           elementFormDefault="qualified">
+
+  <!-- Add operation -->
+  <xs:element name="Add">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Num1" type="xs:float"/>
+        <xs:element name="Num2" type="xs:float"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="AddResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AddResult" type="xs:float"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- Subtract operation -->
+  <xs:element name="Subtract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Num1">
+          <xs:simpleType>
+            <xs:restriction base="xs:int">
+              <xs:maxInclusive value="99999"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Num2">
+          <xs:simpleType>
+            <xs:restriction base="xs:int">
+              <xs:maxInclusive value="99999"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="SubtractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SubtractResult" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- Multiply operation -->
+  <xs:element name="Multiply">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Num1" type="xs:int"/>
+        <xs:element name="Num2" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="MultiplyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MultiplyResult" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- Divide operation -->
+  <xs:element name="Divide">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Num1" type="xs:int"/>
+        <xs:element name="Num2" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="DivideResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DivideResult" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
